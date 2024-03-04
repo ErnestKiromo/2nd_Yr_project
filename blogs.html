@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Dashboard</title>
+      <link rel="icon" width="32" height="32" href="https://img.icons8.com/hieroglyphs/32/22C3E6/experimental-home-hieroglyphs.png" type="image/x-icon" alt=""/>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("assets/body_bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+       @media screen and (max-width: 576px) {
+            .card {
+                max-width: 100%;
+            }
+        }
+        .card:hover {
+            transform: scale(1.05);
+            max-height: auto;
+        }
+    i{
+        font-size: 24px;
+        transition: font-size 0.3s; 
+    }
+    .i:hover {
+        font-size: 30px; 
+    }
+         .flex-container {
+            display: flex;
+            justify-content: flex-end; /* Align items to the end */
+        }
+               .price-input {
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        /* Optional: Add margin between the input boxes */
+        .price-input + .price-input {
+            margin-top: 0.5rem;
+        }
+        .logo {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 40px; /* Adjusted font size */
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Adjusted shadow effect */
+            letter-spacing: -5px; /* Adjusted letter-spacing */
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .logo2 {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Adjusted shadow effect */
+            letter-spacing: -1px; /* Adjusted letter-spacing */
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .u {
+            position: relative;
+            top: -5px; /* Adjusted vertical position */
+        }
+
+        .n {
+            position: relative;
+            left: -10px; /* Adjusted horizontal position */
+        }
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: -3px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .dropdown-item:hover {
+            background-color: rgba(0, 0, 255, 0.242);
+        }
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensure it's above other content */
+        }
+        .sticky-topu {
+            position: sticky;
+            top: 8;
+            z-index: 100; /* Ensure it's above other content */   
+        }
+        .ad{
+            height: 120px;
+            width: 1000px;
+           
+            margin: auto;
+            margin-bottom: 8px;
+            background-image: url(https://media.istockphoto.com/id/525568423/photo/london-piccadilly-during-night.jpg?s=2048x2048&w=is&k=20&c=b9MmnnA4Jv7-V0TSKHlkRAP4KD-0Ra4D7k-M7nqMeWY=);
+            background-size: contain;
+            overflow:hidden ;
+        }
+        .ad_content{
+            height: 100%;
+            width: 70%;
+            background-color: #000000d9;
+            margin-left: 30%;
+            transform: skew(-45deg);
+            transform-origin: bottom left;
+            color: white;
+    
+        }
+        .add-text{
+            transform: skew(45deg);
+            transform-origin: bottom right;
+            padding-top: 30px;
+            padding-left: 40px;
+        }
+                .navi{
+            background-color: #2a5b8517;
+            margin-top: 4px;
+            font-size: large;
+            color: #000000;
+            text-transform: capitalize;
+        }
+        .navi:hover{
+            background-color: #2a5b855e;
+            color: #000000;
+            transition-duration: 0.5s;
+
+        }
+        .active{
+            background-color: #2a5b855e;
+            color: #000000;
+            transition-duration: 0.5s;
+
+        }
+        /*card 2*/
+        .blog-card {
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        }
+
+        .blog-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+
+        .content {
+        padding: 20px;
+        }
+
+        .title {
+        font-size: 20px;
+        margin-bottom: 10px;
+        }
+
+        .excerpt {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 15px;
+        }
+
+        .read-more {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        }
+
+        .read-more:hover {
+        background-color: #0056b3;
+        }
+        /*anime*/
+        .anima {
+            animation: bounceFadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes bounceFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            80% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(-4px);
+            }
+        }
+
+        .anima2 {
+            animation: bounceFadeIn2 1.5s ease-in-out;
+        }
+
+        @keyframes bounceFadeIn2 {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+       /*model big text*/
+       .container7 {
+            background-color: rgba(238, 0, 255, 0.155);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; /* Adjust as needed */
+            }
+
+            .beautiful-text {
+            font-size: 4em; /* Adjust font size as needed */
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 0 20px #000, 0 0 20px #000;
+            -webkit-background-clip: text;
+            background-clip: text;
+            }
+
+    </style>
+</head>
+<body style="overflow: hidden;">
+    <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="logo">
+            <span class="u">U</span>
+            <span class="n">r</span>
+            <span class="p">P</span> <!-- Adding 'P' to complete the 'UNP' -->
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/dashboard.html">Store</a>
+                </li>
+                 <li class="nav-item active">
+                    <a class="nav-link active" href="/blogs.html">Blogs</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/memories.html">Memories/Happening</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/Accomodation.html">House To Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sell.html">Education Material</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Entertainment
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/entertainment.html">Podcast's</a>
+                        <a class="dropdown-item" href="/entertainment.html">Live Radio</a>
+                        <a class="dropdown-item" href="/entertainment.html">Stream Movie</a>
+                        <a class="dropdown-item" href="/entertainment.html">Jokes(vioni)</a>
+                        <a class="dropdown-item" href="/entertainment.html">..More..</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Add products, posts etc
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/sell.html">Sell</a>
+                        <a class="dropdown-item" href="/sell.html">Blog</a>
+                        <a class="dropdown-item" href="/sell.html">Gallery</a>
+                        <a class="dropdown-item" href="/sell.html">Contact</a>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="container-fluid mr-5" style="background-color: rgb(189, 224, 255); max-width:500px;">
+                <h3 style="color:rgb(0, 0, 0); font-weight: 1000px;"><marquee behavior="move" direction="left">Promote your business with 
+                <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
+                    <span class="u">U</span>
+                    <span class="n">r</span>
+                    <span class="p">P</span> <!-- Adding 'P' to complete the 'UNP' -->
+                </span> 
+                Ads
+                </marquee></h3>
+            </div>
+            <a href="/login.html"><button class="btn btn-primary mr-2">log in</button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/signup.html"><button class="btn btn-danger ml-5">sign up</button></a>&nbsp;&nbsp;
+        </div>
+    </nav>
+
+    <div class="container-fluid" >
+        <div class="row" >
+        <!-- Side Menu -->
+        <nav class="col-md-2 d-none d-md-block  sidebar sticky-topu" style="height: 100vh; overflow: hidden; background:#3a14b915;">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <!-- Add your sidebar content here -->
+                    <li class="nav-item">
+                        <a class="nav-link active navi" href="#">Blogs</a>
+                        <a class="nav-link  navi" href="#">Imaging Issues</a>
+                    </li>
+                </ul><br><br>
+                <br><br><br>
+                <button class="btn btn-outlined-secondary dropdown-toggle" 
+                    style="width:260px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Filter by Product
+                </button>
+                <div class="dropdown-menu show" style="width:260px; background:transparent;" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item active" href="#">All</a>
+                       <a class="dropdown-item" href="#">Life</a>
+                    <a class="dropdown-item" href="#">Motivation</a>
+                    <a class="dropdown-item" href="#">Technology</a>
+                    <a class="dropdown-item" href="#">Medicine</a>
+                    <a class="dropdown-item" href="#">Crypto</a>
+                    <!-- Add more dropdown items as needed -->
+                </div>
+            </div>
+        </nav>
+
+            <!-- Main Content -->
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="overflow: scroll; height: 85vh;">
+                <div class="input-group mb-3 mt-6" style="padding-top: 20px;max-width: 500px; margin:auto;">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Search</button>
+                    </div>
+                </div>
+
+                <!-- ad -->
+                <div class="ad anima" >
+                    <div class="ad_content">
+                        <h1 class="add-text">Advertise with  
+                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
+                                <span class="u">U</span>
+                                <span class="n">r</span>
+                                <span class="p">P</span> 
+                            </span> 
+                            for Free</h1>
+                    </div>
+                </div>
+  <div class="container">
+    <div class="row">
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
+            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(255, 255, 0, 0.216);">
+                <div class="content">
+                    <h2 class="title">Life and Faith</h2>
+                    <p class="excerpt" style="height: 70px ; overflow:hidden;"> In the chaos of daily life, we often search for purpose.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(11, 11, 11, 0.216);">
+                <div class="content">
+                    <h2 class="title">It is & It shall</h2>
+                    <p class="excerpt" style="height: 70px ; overflow:hidden;">But amidst the hustle, there's a truth.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(0, 255, 247, 0.216);">
+                <div class="content">
+                    <h2 class="title">It is in Faith</h2>
+                    <p class="excerpt" style="height: 70px ; overflow:hidden;">what is and what will be are intertwined.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(221, 0, 255, 0.216); opacity: 99920%;">
+                <div class="content">
+                    <h2 class="title">It shall in Faith</h2>
+                    <p class="excerpt" style="height: 70px ; overflow:hidden;">Life is a journey of discovery, filled with moments of beauty and wonder.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(43, 255, 0, 0.216);">
+                <div class="content">
+                    <h2 class="title">Always be Graceful</h2>
+                    <p class="excerpt" style="height: 70px ; overflow:hidden;">It's in these moments that we find meaning and purpose, reminding us of the sacredness of existence.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+            </main>
+                <!-- ad iliosimama-->
+               <!-- <div class="ad anima2" style=" z-index: -60; position:absolute; transform: rotate(90deg); right:-400px; top: 700px; opacity: 10%;">
+                    <div class="ad_content">
+                        <h1 class="add-text">Advertise with  
+                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
+                                <span class="u">U</span>
+                                <span class="n">r</span>
+                                <span class="p">P</span> 
+                            </span> 
+                            for Free</h1>
+                    </div>
+                </div> -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Modal -->
+<div class="modal fade" style="background-color: #c003ff0f;" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" style="background-color: #c003ff0f !important;" role="document"> <!-- Added 'modal-xl' class -->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #c003ff0f !important;">
+                <h5 class="modal-title" id="productImageModalLabel">Ur P infomation here</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Modal body content goes here -->
+                <div class="container mt-1 rounded" style="border: 0.5mm solid #c003ff0f; box-shadow: 0 0 20px 10px #c003ff37;">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div >
+                                <div class="container7">
+                                    <h1 class="beautiful-text">It is & It shall</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-4 mt-lg-0">
+                            <div class="d-flex flex-column justify-content-center h-100">
+                                <h2>Life and Faith: A Journey of Meaning</h2>
+                                <p>In the chaos of daily life, we often search for purpose. But amidst the hustle, there's a truth: what is and what will be are intertwined.</p>
+
+                                <p>Life is a journey of discovery, filled with moments of beauty and wonder. It's in these moments that we find meaning and purpose, reminding us of the sacredness of existence.</p>
+
+                                <p>Faith serves as our compass, guiding us through uncertainty. It's a trust in the unseen, anchoring us in times of struggle and illuminating our path in the darkness.</p>
+
+                                <p>As we navigate life's ups and downs, let's embrace the truth that what is and what will be are connected. With faith .</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container w-full">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center" style="height: 50px; margin-bottom: 20px;">
+                        <div class="reaction-icons" style="width: 500px;">
+                            <button type="button" class="btn btn-outline-primary">
+                                <i class="fas fa-thumbs-up"></i> 10
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary">
+                                <i class="fas fa-comment"></i> 5
+                            </button>
+                            <button type="button" class="btn btn-outline-success">
+                                <i class="fas fa-share"></i> 13
+                            </button>
+                        </div>
+                        <div class="input-group" style="width: 500px;">
+                            <input type="text" class="form-control" placeholder="Add a public comment">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer style="z-index: 100;">
+    <p>&copy; Ernest's University Resell Platform 2024. All rights reserved.</p>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/b71be6edff.js" crossorigin="anonymous"></script>
+    <script>
+        // Prevent the dropdown from closing when an item is clicked
+        $('.dropdown-menu').on('click', function (e) {
+            e.stopPropagation();
+        });
+    </script>
+    <!-- animate ad -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const animaElement = document.querySelector('.anima');
+        const animaElement2 = document.querySelector('.anima2');
+
+        function runAnimation() {
+            animaElement.classList.add('anima');
+            setTimeout(function() {
+                animaElement.classList.remove('anima');
+            }, 1500); 
+        }
+        function runAnimation2() {
+            anima2Element.classList.add('anima2');
+            setTimeout(function() {
+                anima2Element.classList.remove('anima2');
+            }, 1500); 
+        }
+            setInterval(runAnimation2, 5000);
+            setInterval(runAnimation, 6000);
+        });
+
+    </script>
+</body>
+</html>

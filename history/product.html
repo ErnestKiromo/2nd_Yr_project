@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+      <link rel="icon" width="32" height="32" href="https://img.icons8.com/hieroglyphs/32/22C3E6/experimental-home-hieroglyphs.png" type="image/x-icon" alt=""/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .product-img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        /* Custom animation for modal entry */
+        @keyframes modal-entry {
+            from {
+                opacity: 0;
+                transform: translateY(-2px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Custom animation for modal exit */
+        @keyframes modal-exit {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-2px);
+            }
+        }
+        /* Apply entry animation to modal */
+        .modal.fade .modal-dialog {
+            animation: modal-entry 0.03s ease-out;
+        }
+        /* Apply exit animation to modal */
+        .modal.fade.show .modal-dialog {
+            animation: modal-exit 0.03s ease-out;
+        }
+    </style>
+</head>
+<body>
+        <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/viewcalt.html">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sell.html">Sell</a>
+                </li>
+            </ul>
+            <div class="container-fluid mr-5" style="background-color: rgb(189, 224, 255); max-width:500px;">
+                <h3 style="color:rgb(255, 255, 255); font-weight: 1000px;"><marquee behavior="move" direction="left">OFFER! OFFER! OFFER!</marquee></h3>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5 rounded" style="border: 0.5mm solid rgb(211, 209, 209);">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="" style=" overflow: hidden;">
+                    <img src="https://i.postimg.cc/hj7M576s/V5201.webp" style="min-height: 500px; width:none;" class="card-img-top product-img" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Name</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="d-flex flex-column justify-content-center h-100">
+                    <h2>Product Details</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Your product details here...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy It</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

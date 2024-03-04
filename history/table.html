@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Themed Table</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 2px solid black;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+  }
+  th {
+    background-color: yellow;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .totals-row {
+    background-color: yellow;
+  }
+</style>
+</head>
+<body>
+
+<h2>Themed Table</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row 1 Data 1</td>
+      <td>Row 1 Data 2</td>
+    </tr>
+    <tr>
+      <td>Row 2 Data 1</td>
+      <td>Row 2 Data 2</td>
+    </tr>
+    <tr>
+      <td>Row 3 Data 1</td>
+      <td>Row 3 Data 2</td>
+    </tr>
+    <tr>
+      <td>Row 4 Data 1</td>
+      <td>Row 4 Data 2</td>
+    </tr>
+    <tr>
+      <td>Row 5 Data 1</td>
+      <td>Row 5 Data 2</td>
+    </tr>
+    <tr>
+      <td>Row 6 Data 1</td>
+      <td>Row 6 Data 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr class="totals-row">
+      <td>Total 1</td>
+      <td>Total 2</td>
+    </tr>
+  </tfoot>
+</table>
+
+</body>
+</html>
+

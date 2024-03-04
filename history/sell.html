@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Upload Form</title>
+      <link rel="icon" width="32" height="32" href="https://img.icons8.com/hieroglyphs/32/22C3E6/experimental-home-hieroglyphs.png" type="image/x-icon" alt=""/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/viewcalt.html">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sell.html">Sell</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin.html">AdminUser</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <!-- Side Menu -->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            dynamic btns here
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row justify-content-center  mt-5">
+            <div class="col-md-6">
+                <h2 class="mb-4">Upload Product</h2>
+                <form action="upload.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="product_name">Product Name</label>
+                        <input type="text" class="form-control" id="product_name" name="product_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                    </div>
+                     <div class="form-group">
+                        <label for="product_name">Product Category</label>
+                        <select type="select" class="form-control" id="product_category" name="product_category" required>
+                            <option value="data">data</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" name="price" min="0" step="0.5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Product Image</label>
+                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

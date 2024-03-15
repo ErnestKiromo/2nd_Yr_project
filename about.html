@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Dashboard</title>
+      <link rel="icon" width="32" height="32" href="https://img.icons8.com/hieroglyphs/32/22C3E6/experimental-home-hieroglyphs.png" type="image/x-icon" alt=""/>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("assets/body_bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            max-width: 24rem;
+            max-height: auto;
+            transition: transform 0.3s;
+             margin-bottom: 1rem; 
+            padding: 1rem; 
+        }
+       @media screen and (max-width: 576px) {
+            .card {
+                max-width: 100%;
+            }
+        }
+        .card:hover {
+            transform: scale(1.05);
+            max-height: auto;
+        }
+        .like-dislike-icons {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            display: none;
+        }
+        .card:hover .like-dislike-icons {
+            display: block;
+        }
+
+    .big-button {
+        display: none;
+        width: 18rem;
+        transition-duration: 0.5s; /* Duration of transition */
+    }
+
+    .card:hover .big-button {
+        display: block;
+        transition: opacity 0.5s ease; /* Transition effect */
+        opacity: 1; /* Show the button smoothly */
+        width: 100%;
+        min-width: 16rem;
+    }
+    i{
+        font-size: 24px;
+        transition: font-size 0.3s; 
+    }
+    .i:hover {
+        font-size: 30px; 
+    }
+         .flex-container {
+            display: flex;
+            justify-content: flex-end; /* Align items to the end */
+        }
+               .price-input {
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        /* Optional: Add margin between the input boxes */
+        .price-input + .price-input {
+            margin-top: 0.5rem;
+        }
+        .logo {
+            font-family: 'Arial Black', sans-serif;
+            font-size: 40px; /* Adjusted font size */
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Adjusted shadow effect */
+            letter-spacing: -5px; /* Adjusted letter-spacing */
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .logo2 {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Adjusted shadow effect */
+            letter-spacing: -1px; /* Adjusted letter-spacing */
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .u {
+            position: relative;
+            top: -5px; /* Adjusted vertical position */
+        }
+
+        .n {
+            position: relative;
+            left: -10px; /* Adjusted horizontal position */
+        }
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: -3px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .dropdown-item:hover {
+            background-color: rgba(0, 0, 255, 0.242);
+        }
+        .sticky-top {
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Ensure it's above other content */
+        }
+        .sticky-topu {
+            position: sticky;
+            top: 8;
+            z-index: 100; /* Ensure it's above other content */   
+        }
+        .navi{
+            background-color: #2a5b8517;
+            margin-top: 4px;
+            font-size: large;
+            color: #000000;
+            text-transform: capitalize;
+        }
+        .navi:hover{
+            background-color: #2a5b855e;
+            color: #000000;
+            transition-duration: 0.5s;
+
+        }
+        .active{
+            background-color: #2a5b855e;
+            color: #000000;
+            transition-duration: 0.5s;
+
+        }
+
+        h2, h3{
+            text-align: center;
+            font-weight: bold;
+        }
+        main{
+            max-width: 1000px;
+            margin: auto;
+        }
+        p {
+            font-size: 1.2rem;
+            font-family: "Arial", sans-serif;
+        }
+        i{
+            font-size: 1.2rem;
+            text-align: center;
+            margin: auto;
+        }
+        /*about animation*/
+        @keyframes jumpAround {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(2px, -2px);
+        }
+        50% {
+            transform: translate(-1px, 2px);
+        }
+        75% {
+            transform: translate(1px, 2px);
+        }
+        100% {
+            transform: translate(-1px, -2px);
+        }
+        }
+         @keyframes doJump {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(5px, -5px);
+        }
+        50% {
+            transform: translate(-5px, 5px);
+        }
+        75% {
+            transform: translate(5px, 5px);
+        }
+        100% {
+            transform: translate(-5px, -5px);
+        }
+        }
+
+       /* p, h2 {
+        animation: jumpAround 5s infinite;
+        }
+        h3 {
+        animation: doJump 3s infinite;
+        }*/
+
+
+    </style>
+</head>
+<body style="overflow: hidden;">
+    <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="logo">
+            <span class="u">U</span>
+            <span class="n">r</span>
+            <span class="p">P</span> <!-- Adding 'P' to complete the 'UNP' -->
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" >
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link " href="/dashboard.html">Store</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/blogs.html">Blogs</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/memories.html">Memories/Happening</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/Accomodation.html">House To Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/education.html">Education Material</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Entertainment
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/entertainment.html">Podcast's</a>
+                        <a class="dropdown-item" href="/entertainment.html">Live Radio</a>
+                        <a class="dropdown-item" href="/entertainment.html">Stream Movie</a>
+                        <a class="dropdown-item" href="/entertainment.html">Jokes(vioni)</a>
+                        <a class="dropdown-item" href="/entertainment.html">..More..</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Add products, posts etc
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/sell.html">Sell</a>
+                        <a class="dropdown-item" href="/sell.html">Blog</a>
+                        <a class="dropdown-item" href="/sell.html">Gallery</a>
+                        <a class="dropdown-item" href="/sell.html">Contact</a>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="container-fluid mr-5" style="background-color: rgb(189, 224, 255); max-width:500px;">
+                <h3 style="color:rgb(0, 0, 0); font-weight: 1000px;"><marquee behavior="move" direction="left">Promote your business with 
+                <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
+                    <span class="u">U</span>
+                    <span class="n">r</span>
+                    <span class="p">P</span> <!-- Adding 'P' to complete the 'UNP' -->
+                </span> 
+                Ads
+                </marquee></h3>
+            </div>
+            <a href="/login.html"><button class="btn btn-primary mr-2">log in</button></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/signin.html"><button class="btn btn-danger ml-5">sign up</button></a>&nbsp;&nbsp;
+        </div>
+    </nav>
+    <!-- Main Content -->
+            <main role="main" class="px-4" style="">
+<h2>About This Project</h2>
+
+<p>Welcome to our platform! This project is part of my second-year practicum where I'm learning FastAPI and practicing JavaScript Fetch. The goal is to create a cool place for students at my university. Here, they can do lots of things like sell their stuff after they finish school, talk to each other, share cool stuff, and know what's happening around campus.</p>
+
+<h3>Objective</h3>
+
+<p>Our main aim is to make a website that's super useful for students. We want it to be easy to use and have lots of cool stuff to do. We hope it helps students feel more connected and makes life a bit easier for them.</p>
+
+<h3>Key Features</h3>
+
+<p><strong>Student Interaction:</strong> On our website, students can chat, join forums, and make friends. It's like a cool hangout spot just for students!</p>
+
+<p><strong>Marketplace:</strong> After graduation, students often have things they don't need anymore. Our website lets them sell these things to other students. It's a win-win!</p>
+
+<p><strong>Content Sharing:</strong> Students can share all kinds of stuff on our website, like class notes, art, or interesting articles. It's a great way to show off talents and help each other out.</p>
+
+<p><strong>Stay Updated:</strong> We make sure students know what's happening at the university. Our website has news, event calendars, and notifications to keep everyone in the loop.</p>
+
+<h3>Vision</h3>
+
+<p>We want our website to be the go-to place for students. We're always working to make it better and add more cool stuff. Our goal is to make university life more fun and connected for everyone.</p>
+
+<p style="text-align:center;"><i>Thanks for being part of our journey! Let's make university life awesome together!</i></p>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- Modal -->
+<footer>
+    <p>&copy; Ernest University Resell Platform  2024. All rights reserved.</p>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/b71be6edff.js" crossorigin="anonymous"></script>
+    <script>
+        // Prevent the dropdown from closing when an item is clicked
+        $('.dropdown-menu').on('click', function (e) {
+            e.stopPropagation();
+        });
+    </script>
+    
+</body>
+</html>

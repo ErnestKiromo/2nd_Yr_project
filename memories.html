@@ -20,7 +20,7 @@
             max-height: auto;
             transition: transform 0.3s;
              margin-bottom: 1rem; 
-            padding: 1rem; 
+            padding: 0rem; 
         }
        @media screen and (max-width: 576px) {
             .card {
@@ -231,6 +231,20 @@
             -webkit-background-clip: text;
             background-clip: text;
             }
+
+
+            .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width as needed */
+            gap: 10px; /* Adjust gap between cards */
+            }
+
+            .grid-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            }
     </style>
 </head>
 <body style="overflow: hidden;">
@@ -281,7 +295,8 @@
                         <a class="dropdown-item" href="/sell.html">Sell</a>
                         <a class="dropdown-item" href="/sell.html">Blog</a>
                         <a class="dropdown-item" href="/sell.html">Gallery</a>
-                        <a class="dropdown-item" href="/sell.html">Contact</a>
+                        <a class="dropdown-item" href="/sell.html/#
+                        ">Contact</a>
                     </div>
                 </li>
 
@@ -310,11 +325,11 @@
                 <ul class="nav flex-column">
                     <!-- Add your sidebar content here -->
                     <li class="nav-item">
-                        <a class="nav-link active navi" href="#">Today</a>
-                        <a class="nav-link  navi" href="#">Fun & Memes</a>
-                        <a class="nav-link  navi" href="#">Hall Of Fame</a>
-                        <a class="nav-link  navi" href="#">Bill Board</a>
-                        <a class="nav-link  navi" href="#">Trending</a>
+                        <!-- <a class="nav-link active navi" onclick="handleClick(event)" href="#">Today</a> -->
+                        <a class="nav-link active navi" onclick="handleClick(event)" href="#">Fun & Memes</a>
+                        <a class="nav-link  navi" onclick="handleClick(event)" href="#">Hall Of Fame</a>
+                        <!-- <a class="nav-link  navi" onclick="handleClick(event)" href="#">Bill Board</a> -->
+                        <!-- <a class="nav-link  navi" onclick="handleClick(event)" href="#">Trending</a> -->
                     </li>
                 </ul><br><br>
                 <br><br><br>
@@ -323,11 +338,11 @@
                     Filter by Product
                 </button>
                 <div class="dropdown-menu show" style="width:260px; background:transparent;" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item active" href="#">All</a>
+                    <!-- <a class="dropdown-item active" href="#">All</a>
                        <a class="dropdown-item" href="#">Funny</a>
                     <a class="dropdown-item" href="#">Most Liked</a>
                     <a class="dropdown-item" href="#">Latest</a>
-                    <a class="dropdown-item" href="#">Custom For You..</a>
+                    <a class="dropdown-item" href="#">Custom For You..</a> -->
                     <!-- Add more dropdown items as needed -->
                 </div>
             </div>
@@ -343,83 +358,22 @@
                 </div>
 
                 <!-- ad -->
-                <div class="ad anima">
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> <!-- Adding 'P' to complete the 'UNP' -->
-                            </span> 
-                            for Free</h1>
-                    </div>
+                <div id="hold_ad">
+                    <!-- ads here -->
                 </div>
                 <!-- Cards -->
-                <!-- <div class="card" style="position: relative;">
-                    <img src="assets/body_bg1.jpg" class="card-img-top" alt="Blog Image">
-                    <h5 style="position:absolute; background-color:#00000088; margin:9px; color:white;" >owner</h5>
-                    <div class="card-body">
-                        <h5 class="card-title">Blog Title</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div class="card-footer">
-                            <div class="align-items-center">
-                                <div class="reaction-icons d-flex" style="justify-content: space-between;" >
-                                    <button type="button" class="btn btn-outline-primary">
-                                        <i class="fas fa-thumbs-up"></i>10 
-                                    </button>
-                                    <button type="button" class="btn btn-outline-secondary">
-                                        <i class="fas fa-comment"></i>5 
-                                    </button>
-                                    <button type="button" class="btn btn-outline-success">
-                                        <i class="fas fa-share"></i>13 
-                                    </button>
-                                </div>
-                               <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Add a public comment">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="button">
-                                            <i class="fas fa-paper-plane"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- <div class="grid-container">
+                <div class="grid-item">Card 1</div>
+                <div class="grid-item">Card 2</div>
+                <div class="grid-item">Card 3</div>
                 </div> -->
                 <!-- meme card -->
                 <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-                            <div class="meme-card blog-card card">
-                                <img src="https://www.sojournsafaris.co.ke/wp-content/uploads/2017/06/F17A0312.jpg" width="100%" height="280px" alt="Meme Image">
-                                <p>Ati mnadai aje mazee 😃😃😃😃😃😃😃.</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-                            <div class="meme-card blog-card card">
-                                <img src="https://www.planetware.com/wpimages/2020/11/kenya-mombasa-top-attractions-day-trips-intro-paragraph-camels-beach.jpg" width="100%" height="280px" alt="Meme Image">
-                                <p>Had fun with the ngamias😃😃😃😃😃😃😃.</p>
-                                <!-- <div>
-                                    <i>like</i>
-                                    <i>na na</i>
-                                </div> -->
-                            </div>
-                        </div>  
+                    <div class="row row2">
+                        <!-- cards here -->
                     </div>
                 </div>
             </main>
-                <!-- ad iliosimama-->
-               <!-- <div class="ad" style=" z-index: 60; position:absolute; transform: rotate(90deg); right:-400px; top: 700px;">
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> 
-                            </span> 
-                            for Free</h1>
-                    </div>
-                </div> -->
         </div>
     </div>
 
@@ -428,44 +382,7 @@
 <div class="modal fade" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl" role="document"> <!-- Added 'modal-xl' class -->
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="productImageModalLabel">Product Image</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Modal body content goes here -->
-                <div class="container mt-5 rounded" style="border: 0.5mm solid rgb(211, 209, 209);">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="" style=" overflow: hidden;">
-                                <img src="https://i.postimg.cc/hj7M576s/V5201.webp" style="min-height: 400px; width:none;" class="card-img-top product-img" alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">Product Name</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Buy Now</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mt-4 mt-lg-0">
-                            <div class="d-flex flex-column justify-content-center h-100">
-                                <h2>Product Details</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <ul>
-                                    <li>Feature 1</li>
-                                    <li>Feature 2</li>
-                                    <li>Feature 3</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Add to cart</button> <!-- Corrected 'calt' to 'cart' -->
-                <a href="/product.html"><button class="btn btn-primary">More</button></a>
-            </div>
+                <img src="https://www.planetware.com/wpimages/2020/11/kenya-mombasa-top-attractions-day-trips-intro-paragraph-camels-beach.jpg" alt="none">
         </div>
     </div>
 </div>
@@ -483,29 +400,159 @@
             e.stopPropagation();
         });
     </script>
-            <!-- animate ad -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        const animaElement = document.querySelector('.anima');
-        const animaElement2 = document.querySelector('.anima2');
+        let clickedLink = "Fun & Memes";
+        // Function to handle click event
+        function handleClick(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+            // Get the text content of the clicked link
+            clickedLink = event.target.textContent;
+            // Get all links
+            const links = document.querySelectorAll('.nav-link');
+            // Remove 'active' class from all links
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Get the clicked link
+            const clickedLinkElement = event.target;
+            // Add 'active' class to the clicked link
+            clickedLinkElement.classList.add('active');
+            //
+           let allPossible = ['Fun & Memes', 'Hall Of Fame'];
+            for (let i = 0; i < allPossible.length; i++) {
+                let spanId = allPossible[i];
+                let elements = document.querySelectorAll('#' + spanId);
+                elements.forEach(element => {
+                    element.style.display = 'none';
+                });
+            };
+            if (clickedLink === "Fun & Memes") {
+                let elements = document.querySelectorAll('#Fun & Memes');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Hall Of Fame') {
+                let elements = document.querySelectorAll('#Hall Of Fame');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } 
+            // Get the text content of the clicked link
+            clickedLink = clickedLinkElement.textContent;
+            populateTable(clickedLink);
+            // Perform any additional actions here, such as navigation or data manipulation
+            console.log("Clicked link:", clickedLink);
+        }
 
-        function runAnimation() {
-            animaElement.classList.add('anima');
+    async function get_products() {
+        try {
+            const response = await fetch('http://127.0.0.1:8003/all-Memories');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
+    }
+    async function populateTable(clickedLink) {
+        let userData = await get_products();
+        userData.reverse();
+        let tableBody = document.querySelector('.row2');
+        // Clear existing content
+        tableBody.innerHTML = '';
+        
+        if(clickedLink == 'Fun & Memes'){
+             userData.forEach(user => {
+                if(user.category == 'fun&memes'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ";
+                    card.id = 'Fun & Memes';
+                    card.innerHTML = `
+                        </div
+                        data-toggle="modal"
+                        onclick=modelid(${user.id}) 
+                     data-target="#productImageModal" class="meme-card blog-card card">
+                                <img src="${user.image}" width="100%" height="280px" alt="Meme Image">
+                                <p>${user.text}.</p>
+                            </div>
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }else if(clickedLink == 'Hall Of Fame' ){
+            userData.forEach(user => {
+                if(user.category == 'Hall Of Fame'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2";
+                    card.id = 'Hall Of Fame';
+                    //
+                    card.innerHTML = `
+                      </div
+                        data-toggle="modal"
+                        onclick=modelid(${user.id}) 
+                     data-target="#productImageModal" class="meme-card blog-card card">
+                                <img src="${user.image}" width="100%" height="280px" alt="Meme Image">
+                                <p>${user.text}.</p>
+                            </div>
+                    `;
+                    tableBody.appendChild(card);
+                }
+            });
+        } 
+    }
+     populateTable(clickedLink);
+</script>
+    <script>
+async function get_ads() {
+    try {
+        const response = await fetch('http://127.0.0.1:8003/all-ads');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+async function ads(user) {
+    let tableBody = document.querySelector('#hold_ad');
+    tableBody.innerHTML = '';
+    let card = document.createElement('div');
+    card.classList = "ad anima";
+    card.style = "background-image: url("+ user.image +");"
+    card.innerHTML = `
+        <div class="ad_content" style="background-color: ${user.color}99;">
+            <h1 class="add-text">${user.title}</h1>
+        </div>
+    `;
+    tableBody.appendChild(card); 
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+    const animaElement = document.querySelector('#hold_ad');
+
+    async function runAnimation() {
+        animaElement.classList.add('anima');
+        let userData = await get_ads();
+        userData.reverse();
+        userData.forEach((user, index) => {
             setTimeout(function() {
                 animaElement.classList.remove('anima');
-            }, 1500); 
-        }
-        function runAnimation2() {
-            anima2Element.classList.add('anima2');
-            setTimeout(function() {
-                anima2Element.classList.remove('anima2');
-            }, 1500); 
-        }
-            setInterval(runAnimation2, 5000);
-            setInterval(runAnimation, 6000);
+                ads(user);
+            }, index * 7000); 
         });
+    }
 
-    </script>
-    
+    setInterval(runAnimation, 7000); 
+});
+
+
+</script>
 </body>
 </html>

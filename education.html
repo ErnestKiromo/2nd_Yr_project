@@ -326,13 +326,13 @@
                 <ul class="nav flex-column">
                     <!-- Add your sidebar content here -->
                     <li class="nav-item">
-                        <a class="nav-link active navi" href="#">Edu_Overflow</a>
-                        <a class="nav-link  navi" href="#">Tests</a>
-                        <a class="nav-link  navi" href="#">Group Materials</a>
-                        <a class="nav-link  navi" href="#">Projects</a>
-                        <a class="nav-link  navi" href="#">Exams</a>
-                        <a class="nav-link  navi" href="#">
-                            <select class="nav-link  navi"  name="" id="">
+                        <a class="nav-link active navi" onclick="handleClick(event)"href="#">Edu_Overflow</a>
+                        <a class="nav-link  navi" onclick="handleClick(event)" href="#">Tests</a>
+                        <a class="nav-link  navi" onclick="handleClick(event)" href="#">Group Materials</a>
+                        <a class="nav-link  navi"  onclick="handleClick(event)"  href="#">Projects</a>
+                        <a class="nav-link  navi" onclick="handleClick(event)" href="#">Exams</a>
+                        <!-- <a class="nav-link  navi" href="#">
+                            <select class="nav-link  navi" onclick="handleClick(event)"  name="" id="">
                                 <option value="Topics">SCIT Topics</option>
                                 <option value="Topics">Debaging</option>
                                 <option value="Topics">AI and ML</option>
@@ -350,8 +350,8 @@
                                 <option value="Topics">Crypto</option>
                                 <option value="Topics">More</option>
                             </select>
-                        </a>
-                        <a class="nav-link  navi" href="#">Ask Ur P</a>
+                        </a> -->
+                        <a class="nav-link  navi" onclick="handleClick(event)" href="#">Ask Ur P</a>
                     </li>
                 </ul><br><br>
                 <br><br><br>
@@ -382,113 +382,334 @@
                     </div>
                 </div>
 
-                <!-- ad -->
-                <div class="ad anima" >
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> 
-                            </span> 
-                            for Free</h1>
-                    </div>
+                               <!-- ad -->
+                <div id="hold_ad">
+                    <!-- ads here -->
                 </div>
-  <div class="container">
-    <div class="row">
-        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(255, 255, 0, 0.216);">
-                <div class="content">
-                    <h2 class="title">AI Revolutionizes Healthcare</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;"> Enhancing Diagnosis & Treatment.</p>
-                    <a href="#" class="read-more">Read More</a>
+            <div class="container">
+                <div class="row row2">
+                    <!-- Card 2 -->
                 </div>
             </div>
-        </div>
-         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(11, 11, 11, 0.216);">
-                <div class="content">
-                    <h2 class="title">AI-Powered Chatbots:</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;">Streamlining Customer Service Experiences.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(0, 255, 247, 0.216);">
-                <div class="content">
-                    <h2 class="title">Autonomous Vehicles</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;">AI Driving the Future of Transportation.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(221, 0, 255, 0.216); opacity: 99920%;">
-                <div class="content">
-                    <h2 class="title">AI in Finance</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;"> Optimizing Trading Strategies and Risk Management.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(43, 255, 0, 0.216);">
-                <div class="content">
-                    <h2 class="title">AI in Education</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;">Personalized Learning for Every Student.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
             </main>
-                <!-- ad iliosimama-->
-               <!-- <div class="ad anima2" style=" z-index: -60; position:absolute; transform: rotate(90deg); right:-400px; top: 700px; opacity: 10%;">
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> 
-                            </span> 
-                            for Free</h1>
-                    </div>
-                </div> -->
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <!-- Modal -->
-<div class="modal fade" style="background-color: #c003ff0f;" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" style="background-color: #c003ff0f !important;" role="document"> <!-- Added 'modal-xl' class -->
+<div class="modal fade" onclick="closeModal()" id="productImageModal"  tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
+<!-- this model -->
+</div>
+<footer style="z-index: 100;">
+    <p>&copy; Ernest's University Resell Platform 2024. All rights reserved.</p>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/b71be6edff.js" crossorigin="anonymous"></script>
+    <script>
+        // Prevent the dropdown from closing when an item is clicked
+        $('.dropdown-menu').on('click', function (e) {
+            e.stopPropagation();
+        });
+    </script>
+        <script>
+        let clickedLink = "Edu_Overflow";
+        // Function to handle click event
+        function handleClick(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+            // Get the text content of the clicked link
+            clickedLink = event.target.textContent;
+            // Get all links
+            const links = document.querySelectorAll('.nav-link');
+            // Remove 'active' class from all links
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Get the clicked link
+            const clickedLinkElement = event.target;
+            // Add 'active' class to the clicked link
+            clickedLinkElement.classList.add('active');
+            //
+           let allPossible = ['Edu_Overflow', 'Tests', 'Group Materials', 'Projects', 'Exams', 'Ask Ur P'];
+            for (let i = 0; i < allPossible.length; i++) {
+                let spanId = allPossible[i];
+                let elements = document.querySelectorAll('#' + spanId);
+                elements.forEach(element => {
+                    element.style.display = 'none';
+                });
+            };
+            if (clickedLink === "Edu_Overflow") {
+                let elements = document.querySelectorAll('#Edu_Overflow');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Tests') {
+                let elements = document.querySelectorAll('#Tests');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Group Materials') {
+                let elements = document.querySelectorAll('#Group Materials');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Projects') {
+                let elements = document.querySelectorAll('#Projects');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Exams') {
+                let elements = document.querySelectorAll('#Exams');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Ask Ur P') {
+                let elements = document.querySelectorAll('#Ask Ur P');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } 
+            // Get the text content of the clicked link
+            clickedLink = clickedLinkElement.textContent;
+            populateTable(clickedLink);
+            // Perform any additional actions here, such as navigation or data manipulation
+            console.log("Clicked link:", clickedLink);
+        }
+
+    async function get_products() {
+        try {
+            const response = await fetch('http://127.0.0.1:8003/all-education');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
+    }
+    async function populateTable(clickedLink) {
+        let userData = await get_products();
+        userData.reverse();
+        let tableBody = document.querySelector('.row2')
+        // Clear existing content
+        tableBody.innerHTML = '';
+        
+        if(clickedLink == 'Edu_Overflow'){
+             userData.forEach(user => {
+                if(user.category == 'Edu_Overflow'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ";
+                    card.id = 'Edu_Overflow';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" 
+                        onclick=modelid(${user.id}) 
+                        data-target="#productImageModal" style="  background-color:  ${user.color}33;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;">${user.subtitle}</p>
+                                <a href="#" class="read-more" style="background-color: ${user.color}77; hover:background-color: ${user.color}33; color:black; hover:border:solid black 1px;">Read More</a>
+                            </div>
+                        </div>
+                
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }else if(clickedLink == 'Tests'){
+             userData.forEach(user => {
+                if(user.category == 'Tests'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ";
+                    card.id = 'Tests';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" 
+                        onclick=modelid(${user.id}) 
+                        data-target="#productImageModal" style="  background-color:  ${user.color}33;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;">${user.subtitle}</p>
+                                <a href="#" class="read-more" style="background-color: ${user.color}77; hover:background-color: ${user.color}33; color:black; hover:border:solid black 1px;">Read More</a>
+                            </div>
+                        </div>
+                
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }else if(clickedLink == 'Group Materials'){
+             userData.forEach(user => {
+                if(user.category == 'Group Materials'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ";
+                    card.id = 'Group Materials';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" 
+                        onclick=modelid(${user.id}) 
+                        data-target="#productImageModal" style="  background-color:  ${user.color}33;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;">${user.subtitle}</p>
+                                <a href="#" class="read-more" style="background-color: ${user.color}77; hover:background-color: ${user.color}33; color:black; hover:border:solid black 1px;">Read More</a>
+                            </div>
+                        </div>
+                
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }else if(clickedLink == 'Projects'){
+             userData.forEach(user => {
+                if(user.category == 'Projects'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ";
+                    card.id = 'Projects';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" 
+                        onclick=modelid(${user.id}) 
+                        data-target="#productImageModal" style="  background-color:  ${user.color}33;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;">${user.subtitle}</p>
+                                <a href="#" class="read-more" style="background-color: ${user.color}77; hover:background-color: ${user.color}33; color:black; hover:border:solid black 1px;">Read More</a>
+                            </div>
+                        </div>
+                
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }else if(clickedLink == 'Exams'){
+             userData.forEach(user => {
+                if(user.category == 'Exams'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ";
+                    card.id = 'Exams';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" 
+                        onclick=modelid(${user.id}) 
+                        data-target="#productImageModal" style="  background-color:  ${user.color}33;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;">${user.subtitle}</p>
+                                <a href="#" class="read-more" style="background-color: ${user.color}77; hover:background-color: ${user.color}33; color:black; hover:border:solid black 1px;">Read More</a>
+                            </div>
+                        </div>
+                
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }else if(clickedLink == 'Ask Ur P'){
+             userData.forEach(user => {
+                if(user.category == 'Ask Ur P'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ";
+                    card.id = 'Ask Ur P';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" 
+                        onclick=modelid(${user.id}) 
+                        data-target="#productImageModal" style="  background-color:  ${user.color}33;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;">${user.subtitle}</p>
+                                <a href="#" class="read-more" style="background-color: ${user.color}77; hover:background-color: ${user.color}33; color:black; hover:border:solid black 1px;">Read More</a>
+                            </div>
+                        </div>
+                
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }
+    }
+     populateTable(clickedLink);
+</script>
+<script>
+function closeModal() {
+    // Hide the modal using Bootstrap's modal method
+   /* $('#productImageModal').modal('hide');
+    
+    // Ensure modal backdrop is also removed
+    $('.modal-backdrop').remove();
+    
+    // Remove the "show" class from the modal (if necessary)
+    $('#productImageModal').removeClass('show');
+    
+    // Remove modal-open class from the body (if necessary)
+    $('body').removeClass('modal-open');
+    $('#productImageModal').removeClass('show');
+
+    var modal = document.getElementById('productImageModal');
+
+    // Set aria-labelledby attribute
+    modal.setAttribute('aria-labelledby', 'productImageModalLabel');
+
+    // Set aria-hidden attribute
+    modal.setAttribute('aria-hidden', 'true');
+    tableBody.innerHTML = '';*/
+    location.reload();
+
+}
+
+</script>
+<!-- model -->
+<script>
+   async function modelid(id){
+    console.log('id: '+id);
+   // try {
+    const response = await fetch('http://127.0.0.1:8003/education/' + id);
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+        //return data;
+   // } catch (error) {
+       // console.error('There was a problem with the fetch operation:', error);
+   // }
+    let user = data;
+    console.log('userData: '+ user);
+    let tableBody = document.getElementById('productImageModal');
+    
+    tableBody.style = "background-color: "+ user.color +"0f;" 
+    // Clear existing content
+    tableBody.innerHTML = '';
+    let card = document.createElement('div');
+    card.classList = "modal-dialog modal-dialog-centered modal-xl";
+    card.style = "background-color:none !important;";
+    card.role = "document";
+    card.innerHTML = `       
         <div class="modal-content">
-            <div class="modal-header" style="background-color: #c003ff0f !important;">
-                <h5 class="modal-title" id="productImageModalLabel">Ur P infomation here</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-header" style="background-color: ${user.color}33 !important;">
+                <h5 class="modal-title" id="productImageModalLabel">Ur P Education Section</h5>
+                <button type="button" onclick="closeModal()" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <!-- Modal body content goes here -->
-                <div class="container mt-1 rounded" style="border: 0.5mm solid #c003ff0f; box-shadow: 0 0 20px 10px #c003ff37;">
+                <div class="container mt-1 rounded" style="border: 0.5mm solid ${user.color}33; box-shadow: 0 0 20px 10px ${user.color}37;">
                     <div class="row">
                         <div class="col-lg-6">
                             <div >
-                                <div class="container7">
-                                    <h1 class="beautiful-text">AI era has begun to flourish</h1>
+                                <div class="container7"  style="background-color:${user.color}33;">
+                                    <h1 class="beautiful-text">
+                                        ${user.title}
+                                        <!-- It is & It shall -->
+                                    </h1>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 mt-4 mt-lg-0">
-                            <div class="d-flex flex-column justify-content-center h-100">
-                                <h2>Artificial Intelligence (AI)</h2>
-                                <p>Artificial Intelligence (AI) is reshaping industries across the globe, from healthcare to finance and education, with its ability to offer innovative solutions. By leveraging advanced algorithms and data analytics,</p>
-                                 <p>AI streamlines processes, enhances decision-making, and delivers personalized experiences, marking a significant paradigm shift in how businesses operate and individuals interact with technology.</p>
+                            <div style="height: 300px; overflow-y: auto; position: relative;">
+                                <h2 style="position: sticky; top: 0;  backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.5);">${user.subtitle}</h2>
+                                <div style="padding-top: 30px;"> 
+                                    ${user.blog}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -520,44 +741,58 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<footer style="z-index: 100;">
-    <p>&copy; Ernest's University Resell Platform 2024. All rights reserved.</p>
-</footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://kit.fontawesome.com/b71be6edff.js" crossorigin="anonymous"></script>
-    <script>
-        // Prevent the dropdown from closing when an item is clicked
-        $('.dropdown-menu').on('click', function (e) {
-            e.stopPropagation();
-        });
+    `;
+    tableBody.appendChild(card); 
+   }
     </script>
     <!-- animate ad -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        const animaElement = document.querySelector('.anima');
-        const animaElement2 = document.querySelector('.anima2');
+<script>
+async function get_ads() {
+    try {
+        const response = await fetch('http://127.0.0.1:8003/all-ads');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
 
-        function runAnimation() {
-            animaElement.classList.add('anima');
+async function ads(user) {
+    let tableBody = document.querySelector('#hold_ad');
+    tableBody.innerHTML = '';
+    let card = document.createElement('div');
+    card.classList = "ad anima";
+    card.style = "background-image: url("+ user.image +");"
+    card.innerHTML = `
+        <div class="ad_content" style="background-color: ${user.color}99;">
+            <h1 class="add-text">${user.title}</h1>
+        </div>
+    `;
+    tableBody.appendChild(card); 
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+    const animaElement = document.querySelector('#hold_ad');
+
+    async function runAnimation() {
+        animaElement.classList.add('anima');
+        let userData = await get_ads();
+        userData.reverse();
+        userData.forEach((user, index) => {
             setTimeout(function() {
                 animaElement.classList.remove('anima');
-            }, 1500); 
-        }
-        function runAnimation2() {
-            anima2Element.classList.add('anima2');
-            setTimeout(function() {
-                anima2Element.classList.remove('anima2');
-            }, 1500); 
-        }
-            setInterval(runAnimation2, 5000);
-            setInterval(runAnimation, 6000);
+                ads(user);
+            }, index * 7000); 
         });
+    }
 
-    </script>
+    setInterval(runAnimation, 7000); 
+});
+
+
+</script>
 </body>
 </html>

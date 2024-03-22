@@ -154,7 +154,7 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Active</th>
-                            <th>Buying_Selling</th>
+                            <th>Phone number</th>
                             <th>Activity</th>
                         </tr>
                     </thead>
@@ -170,7 +170,7 @@
 <script>
     async function get_users() {
         try {
-            const response = await fetch('http://127.0.0.1:8001/all-users');
+            const response = await fetch('http://127.0.0.1:8003/all-users');
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
@@ -189,11 +189,11 @@
             let row = document.createElement('tr');
             row.innerHTML = `
                 <td>${user.id}</td>
-                <td><a href="#">${user.username}</a></td>
+                <td><a href="#">${user.name}</a></td>
                 <td>${user.email}</td>
-                <td>${user.online_offline}</td>
-                <td>${user.selling_buying}</td>
-                <td><button class="btn btn-primary">${user.active_blocked}</button></td>
+                <td>${user.active_or_blocked}</td>
+                <td>${user.phone}</td>
+                <td><button class="btn btn-primary">${user.last_login}</button></td>
             `;
         // console.log(user)
         // console.log(user.online_offline)

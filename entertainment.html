@@ -136,14 +136,12 @@
            
             margin: auto;
             margin-bottom: 8px;
-            background-image: url(https://media.istockphoto.com/id/525568423/photo/london-piccadilly-during-night.jpg?s=2048x2048&w=is&k=20&c=b9MmnnA4Jv7-V0TSKHlkRAP4KD-0Ra4D7k-M7nqMeWY=);
             background-size: contain;
             overflow:hidden ;
         }
         .ad_content{
             height: 100%;
             width: 70%;
-            background-color: #000000d9;
             margin-left: 30%;
             transform: skew(-45deg);
             transform-origin: bottom left;
@@ -256,7 +254,29 @@
         color: #666666;
         line-height: 1.5;
     }
-    </style>
+    .navi{
+        background-color: #2a5b8517;
+        margin-top: 4px;
+        font-size: large;
+        color: #000000;
+        text-transform: capitalize;
+    }
+    .navi:hover{
+        background-color: #2a5b855e;
+        color: #000000;
+        transition-duration: 0.5s;
+
+    }
+    .active{
+        background-color: #2a5b855e;
+        color: #000000;
+        transition-duration: 0.5s;
+
+    }
+    .conditional {
+        display: none;
+    }
+</style>
 </head>
 <body style="overflow: hidden;">
     <!-- Header Navigation Bar -->
@@ -291,11 +311,11 @@
                         Entertainment
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/entertainment.html">Podcast's</a>
-                        <a class="dropdown-item" href="/entertainment.html">Live Radio</a>
-                        <a class="dropdown-item" href="/entertainment.html">Stream Movie</a>
-                        <a class="dropdown-item" href="/entertainment.html">Jokes(vioni)</a>
-                        <a class="dropdown-item" href="/entertainment.html">..More..</a>
+                        <a class="dropdown-item nav-items active navi" href="#" onclick="handleClick(event)">Podcast's</a>
+                        <a class="dropdown-item nav-items navi" href="#" onclick="handleClick(event)">Live Radio</a>
+                        <a class="dropdown-item nav-items navi" href="#" onclick="handleClick(event)">Stream Movie</a>
+                        <a class="dropdown-item nav-items navi" href="#" onclick="handleClick(event)">Jokes(vioni)</a>
+                        <a class="dropdown-item nav-items navi" href="#" onclick="handleClick(event)">..More..</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -335,12 +355,12 @@
                 <ul class="nav flex-column">
                     <!-- Add your sidebar content here -->
                     <li class="nav-item">
-                        <a class="nav-link active navi" href="#">Podcast's</a>
-                        <a class="nav-link  navi" href="#">Live Radio</a>
-                        <a class="nav-link  navi" href="#">Stream Videos</a>
-                        <a class="nav-link  navi" href="#">Jokes(vioni)</a>
-                        <a class="nav-link  navi" href="#">Football</a>
-                        <a class="nav-link  navi" href="#">..More..</a>
+                        <a class="nav-link active navi" href="#"  onclick="handleClick(event)">Live Radio</a>
+                        <a class="nav-link  navi" href="#"  onclick="handleClick(event)">Jokes(vioni)</a>
+                        <a class="nav-link  navi" href="#"  onclick="handleClick(event)">Stream Videos</a>
+                        <a class="nav-link  navi" href="#"  onclick="handleClick(event)">Football</a>
+                        <a class="nav-link  navi" href="#"  onclick="handleClick(event)">Podcast's</a>
+                        <a class="nav-link  navi" href="#"  onclick="handleClick(event)">..More..</a>
                     </li>
                 </ul><br><br>
                 <br><br><br>
@@ -369,161 +389,18 @@
                 </div>
 
                 <!-- ad -->
-                <div class="ad anima">
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> <!-- Adding 'P' to complete the 'UNP' -->
-                            </span> 
-                            for Free</h1>
-                    </div>
+                <div id="hold_ad">
+                    <!-- ads here -->
                 </div>
                 
                 
                   <div class="container">
-                <div class="row">
-                    <!-- Card 2 -->
-                    <!-- meme card -->
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(0, 234, 255, 0.216); height: 100%;">
-                            <!-- <img src="/assets/body_bg1.jpg" width="100%" height="280px" alt="Meme Image"> -->
-                                <video controls width="100%" height="280px" loop>
-                                    <source src="/assets/movieexp.mp4" type="video/mp4">
-                                </video>
-                            <p>Mbona😃😃😃😃? 😃😃 Ju😃😃😃. </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(255, 255, 0, 0.216); height: 100%;">
-                            <div class="content">
-                                <h2 class="title">Broken Pencil</h2>
-                                <p class="excerpt" style="height: 70px ; overflow:hidden;">Why did the pencil refuse to write? Because it was pointless!😂😂🚼🚼🚼</p>
-                                <audio controls loop> <source src="/assets/podcastexp.mp3" type="audio/mpeg"> </audio>
-                                <!-- <a href="#" class="read-more">Read More</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(11, 11, 11, 0.216); height: 100%;">
-                            <div class="content">
-                                <h2 class="title">Shy Computer</h2>
-                                <p class="excerpt" style="height: 70px ; overflow:hidden;">Why did the computer go to therapy? Because it had too many bytes of anxiety!😂😂😂</p>
-                                <!-- <a href="#" class="read-more">Read More</a> -->
-                            </div>
-                        </div>
-                    </div>        <!-- Card 2 -->
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(0, 255, 247, 0.216); height: 100%;">
-                            <div class="content">
-                                <h2 class="title">Forgetful Banana</h2>
-                                <p class="excerpt" style="height: 70px ; overflow:hidden;">Why did the banana go to school? Because it wanted to become a banana-split!😂😂😂</p>
-                                <!-- <a href="#" class="read-more">Read More</a> -->
-                            </div>
-                        </div>
-                    </div>        <!-- Card 2 -->
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(221, 0, 255, 0.216); height: 100%; opacity: 99920%;">
-                            <div class="content">
-                                <h2 class="title"> Sleepy Smartphone</h2>
-                                <p class="excerpt" style="height: 70px ; overflow:hidden;"> Why did the smartphone go to bed? Because it lost its charger and had low "battery" life!😂😂😂😂</p>
-                                <!-- <a href="#" class="read-more">Read More</a> -->
-                            </div>
-                        </div>
-                    </div>        <!-- Card 2 -->
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(43, 255, 0, 0.216); height: 100%;">
-                            <div class="content">
-                                <h2 class="title"> Athletic Tomato</h2>
-                                <p class="excerpt" style="height: 70px ; overflow:hidden;">Why did the tomato turn red? Because it saw the salad dressing!😂😂😂</p>
-                                <!-- <a href="#" class="read-more">Read More</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(8, 0, 255, 0.216); height: 100%;">
-                            <div class="content">
-                                <h2 class="title"> Live NRG</h2>
-                                <h4 class="excerpt">🔥🔥🔥🔥🔥🔥</h4>
-                                <div style="width: 56%; overflow:hidden; border-radius: 30px;">
-                                    <iframe src="https://tunein.com/embed/player/s304137/" style="width:600px; height:100px;" scrolling="no" frameborder="no"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(255, 0, 68, 0.216); height: 100%;">
-                            <div class="content">
-                                <h2 class="title"> Capital FM</h2>
-                                <h4 class="excerpt">🔥🔥</h4>
-                                <div style="width: 56%; overflow:hidden; border-radius: 30px;">
-                                    <iframe src="https://tunein.com/embed/player/s152433/" style="width:600px; height:100px;" scrolling="no" frameborder="no"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(0, 255, 72, 0.216); height: 100%;">
-                            <div class="content">
-                                <h2 class="title">Radio Jumbo</h2>
-                                <h4 class="excerpt">🔥🔥</h4>
-                                <div style="width: 56%; overflow:hidden; border-radius: 30px;">
-                                    <iframe src="https://tunein.com/embed/player/s253512/" style="width:600px; height:100px;" scrolling="no" frameborder="no"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(0, 4, 242, 0.216); height: 100%;">
-                            <div class="content">
-                                <h2 class="title">Smooth FM</h2>
-                                <h4 class="excerpt">🔥🔥</h4>
-                                <div style="width: 56%; overflow:hidden; border-radius: 30px;">
-                                    <iframe src="https://tunein.com/embed/player/s253517/"  style="width:600px; height:100px;" scrolling="no" frameborder="no"></iframe>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(255, 0, 0, 0.408); height: 100%;">
-                            <img src="https://cdn.standardmedia.co.ke/images/wysiwyg/images/r2y3OzUJaJzIYygSY1mc24oaqcLf4eRgZc5MBkVN.jpg" width="100%" height="280px">
-                            <div class="title">Man City's 3-1 Man United</div>
-                            <p>Man City's 3-1 win against Man United 😃😃😃 provides reality check for Jim Ratcliffe. </p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(255, 255, 255, 0.116); height: 100%;">
-                            <img src="https://younghollywood.com/images/stories/taylorswift(19).webp" width="100%" height="280px">
-                            <div class="title">Bill Board Suprice</div>
-                            <p>It is happening again and it is no joke. it is for real!!</p>
-                        </div>
-                    </div>
-                     <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(255, 255, 255, 0.116); height: 100%;">
-                            <img src="https://younghollywood.com/images/stories/taylorswift(19).webp" width="100%" height="280px">
-                            <div class="title">Bill Board Suprice</div>
-                            <p>It is happening again and it is no joke. it is for real!!</p>
-                        </div>
-                    </div>
-                    <div class="w-50 mt-4" height="100%">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/W1oWvkQxlfw" title="Old Country Gospel Songs Of All Time✝️Inspirational Country Gospel Music✝️Beautiful Gospel Hymn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <!-- https://youtu.be/W1oWvkQxlfw --></div>
+                <div class="row row2">
+                    <!-- Card 2 render here with js-->
                 </div>
+          
             </div>
             </main>
-                <!-- ad iliosimama-->
-               <!-- <div class="ad" style=" z-index: 60; position:absolute; transform: rotate(90deg); right:-400px; top: 700px;">
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span>
-                            </span> 
-                            for Free</h1>
-                    </div>
-                </div> -->
         </div>
     </div>
 
@@ -543,70 +420,232 @@
             e.stopPropagation();
         });
     </script>
-        <!-- animate ad -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        const animaElement = document.querySelector('.anima');
-        const animaElement2 = document.querySelector('.anima2');
+        let clickedLink = "Live Radio";
+        // Function to handle click event
+        function handleClick(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+            // Get the text content of the clicked link
+            clickedLink = event.target.textContent;
+            // Get all links
+            const links = document.querySelectorAll('.nav-link');
+            // Remove 'active' class from all links
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Get the clicked link
+            const clickedLinkElement = event.target;
+            // Add 'active' class to the clicked link
+            clickedLinkElement.classList.add('active');
+            //
+           let allPossible = ['LiveRadio', 'video', 'jokes', 'football', 'more'];// , 'Podcasts',
+            for (let i = 0; i < allPossible.length; i++) {
+                let spanId = allPossible[i];
+                let elements = document.querySelectorAll('#' + spanId);
+                elements.forEach(element => {
+                    element.style.display = 'none';
+                });
+            };
+            if (clickedLink === "Podcast's") {
+                let elements = document.querySelectorAll('#Podcasts');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Live Radio') {
+                let elements = document.querySelectorAll('#LiveRadio');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Stream Videos') {
+                let elements = document.querySelectorAll('#video');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Jokes(vioni)') {
+                let elements = document.querySelectorAll('#jokes');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Football') {
+                let elements = document.querySelectorAll('#football');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === '..More..') {
+                let elements = document.querySelectorAll('#more');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } 
+            // Get the text content of the clicked link
+            clickedLink = clickedLinkElement.textContent;
+            populateTable(clickedLink);
+            // Perform any additional actions here, such as navigation or data manipulation
+            console.log("Clicked link:", clickedLink);
+        }
 
-        function runAnimation() {
-            animaElement.classList.add('anima');
+    async function get_products() {
+        try {
+            const response = await fetch('http://127.0.0.1:8003/all-Entertainment');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
+    }
+    async function populateTable(clickedLink) {
+        let userData = await get_products();
+        userData.reverse();
+        let tableBody = document.querySelector('.row2');
+        // Clear existing content
+        tableBody.innerHTML = '';
+        
+        if(clickedLink == 'Live Radio'){
+                console.log('true4');
+             userData.forEach(user => {
+                if(user.category == 'Live Radio'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2";
+                    card.id = 'LiveRadio';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: ${user.color}33">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <h4 class="excerpt">${user.description}</h4>
+                                <div style="width: 56%; overflow:hidden; border-radius: 30px;">
+                                    <iframe src="${user.link}" style="width:600px; height:100px;" scrolling="no" frameborder="no"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }else if(clickedLink == 'Jokes(vioni)' ){
+            userData.forEach(user => {
+                if(user.category == 'jokes(Vioni)'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2";
+                    card.id = 'jokes';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="background-color: ${user.color}33; height: 100%; opacity: 99920%;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;">${user.description}</p>
+                            </div>
+                        </div>
+                    `;
+                    tableBody.appendChild(card);
+                }
+            });
+        } else if(clickedLink == 'Stream Videos' ){
+            userData.forEach(user => {
+                if(user.category == 'Stream Videos'){
+                    let card = document.createElement('div');
+                    card.style = "width:550px; height:310px;";
+                    card.id = 'video';
+                    card.innerHTML = `
+                        <iframe id="video" width="550px" height="310px" src="${user.link}" title="${user.title}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    `;
+                    tableBody.appendChild(card);
+                }
+            });
+        }else if(clickedLink == 'Football' ){
+            userData.forEach(user => {
+                if(user.category == 'Football'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2";
+                    card.id = 'football';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color:${user.color}33; height: 100%;">
+                            <img src="https://cdn.standardmedia.co.ke/images/wysiwyg/images/r2y3OzUJaJzIYygSY1mc24oaqcLf4eRgZc5MBkVN.jpg" width="100%" height="280px">
+                            <div class="title">${user.title}</div>
+                            <p>${user.description}</p>
+                        </div>
+                    `;
+                    tableBody.appendChild(card);
+                }
+            });
+        }else if(clickedLink == "Podcast's" ){
+            let card = document.createElement('div');
+            card.style = "width:100%;";
+            card.id = 'Podcasts';
+            card.innerHTML = `
+                <h1 class="mt-9" style="text-align:center;">Podcast coming soon!</h1>
+            `;
+            tableBody.appendChild(card);
+        }else{
+            userData.forEach(user => {
+                if(user.category == 'other'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2";
+                    card.id = 'more';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color:${user.color}33; height: 100%;">
+                            <img src="https://younghollywood.com/images/stories/taylorswift(19).webp" width="100%" height="280px">
+                            <div class="title">${user.title}</div>
+                            <p>${user.description}</p>
+                        </div>
+                    `;
+                    tableBody.appendChild(card);
+                }
+            });
+        }
+    }
+     populateTable(clickedLink);
+</script>
+<script>
+async function get_ads() {
+    try {
+        const response = await fetch('http://127.0.0.1:8003/all-ads');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+async function ads(user) {
+    let tableBody = document.querySelector('#hold_ad');
+    tableBody.innerHTML = '';
+    let card = document.createElement('div');
+    card.classList = "ad anima";
+    card.style = "background-image: url("+ user.image +");"
+    card.innerHTML = `
+        <div class="ad_content" style="background-color: ${user.color}99;">
+            <h1 class="add-text">${user.title}</h1>
+        </div>
+    `;
+    tableBody.appendChild(card); 
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+    const animaElement = document.querySelector('#hold_ad');
+
+    async function runAnimation() {
+        animaElement.classList.add('anima');
+        let userData = await get_ads();
+        userData.reverse();
+        userData.forEach((user, index) => {
             setTimeout(function() {
                 animaElement.classList.remove('anima');
-            }, 1500); 
-        }
-        function runAnimation2() {
-            anima2Element.classList.add('anima2');
-            setTimeout(function() {
-                anima2Element.classList.remove('anima2');
-            }, 1500); 
-        }
-            setInterval(runAnimation2, 5000);
-            setInterval(runAnimation, 6000);
+                ads(user);
+            }, index * 7000); 
         });
-
-    </script>
-    <!-- shazam -->
-    <!-- <script>
-    const url = 'https://shazam.p.rapidapi.com/shazam-events/list?artistId=73406786&l=en-US&from=2022-12-31&limit=50&offset=0';
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': 'e8a1f8a40emsh07b657319018e8dp10a6ffjsn6debd82a7ee6',
-        'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
-      }
-    };
-
-    async function fetchData() {
-      try {
-        const response = await fetch(url, options);
-        const data = await response.json();
-        displayResults(data);
-      } catch (error) {
-        console.error(error);
-      }
     }
 
-    function displayResults(data) {
-      const resultsContainer = document.getElementById('results');
+    setInterval(runAnimation, 7000); 
+});
 
-      data.events.forEach(event => {
-        const card = `
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img src="${event.images.default}" class="card-img-top" alt="${event.title}">
-              <div class="card-body">
-                <h5 class="card-title">${event.title}</h5>
-                <p class="card-text">${event.venue.name}</p>
-              </div>
-            </div>
-          </div>
-        `;
-        resultsContainer.insertAdjacentHTML('beforeend', card);
-      });
-    }
 
-    fetchData();
-  </script> -->
+</script>
 </body>
 </html>

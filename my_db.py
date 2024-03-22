@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS dashboard (
     likes INT NULL,
     price INT NULL,
     title VARCHAR(255) NULL,
-    type VARCHAR(255) NULL,
+    category VARCHAR(255) NULL,
     description VARCHAR(255) NULL,
     location VARCHAR(20) NULL,
     seller_id INT NULL,
@@ -69,12 +69,11 @@ CREATE TABLE IF NOT EXISTS blog (
     color VARCHAR(255) NULL,
     title VARCHAR(255) NULL,
     subtitle VARCHAR(255) NULL,
-    type VARCHAR(255) NULL,
+    category VARCHAR(255) NULL,
     blog VARCHAR(255) NULL,
     likes INT NULL,
     forwards INT NULL,
     seller_id INT NULL,
-    category INT NULL
 )
 """
 
@@ -83,7 +82,7 @@ CREATE TABLE IF NOT EXISTS memories_and_happenings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     image VARCHAR(255) NULL,
     text VARCHAR(255) NULL,
-    type VARCHAR(255) NULL,
+    category VARCHAR(255) NULL,
     likes INT NULL,
     dislikes INT NULL,
     seller_id INT NULL
@@ -97,7 +96,8 @@ CREATE TABLE IF NOT EXISTS house_to_rent (
     price INT NULL,
     description VARCHAR(255) NULL,
     name VARCHAR(255) NULL,
-    type VARCHAR(255) NULL,
+    category VARCHAR(255) NULL,
+    vacant VARCHAR(255) NULL,
     seller_id INT NULL
 )
 """
@@ -108,12 +108,11 @@ CREATE TABLE IF NOT EXISTS educational_materials (
     color VARCHAR(255) NULL,
     title VARCHAR(255) NULL,
     subtitle VARCHAR(255) NULL,
-    type VARCHAR(255) NULL,
+    category VARCHAR(255) NULL,
     blog VARCHAR(255) NULL,
     likes INT NULL,
     forwards INT NULL,
     seller_id INT NULL,
-    category INT NULL
 )
 """
 
@@ -122,7 +121,7 @@ CREATE TABLE IF NOT EXISTS entertainment (
     id INT AUTO_INCREMENT PRIMARY KEY,
     color VARCHAR(255) NULL,
     title VARCHAR(255) NULL,
-    type VARCHAR(255) NULL,
+    category VARCHAR(255) NULL,
     description VARCHAR(255) NULL,
     link VARCHAR(255) NULL,
     likes INT NULL,

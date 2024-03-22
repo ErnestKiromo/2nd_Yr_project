@@ -20,7 +20,7 @@
             max-height: auto;
             transition: transform 0.3s;
              margin-bottom: 1rem; 
-            padding: 1rem; 
+            padding: 0rem; 
         }
        @media screen and (max-width: 576px) {
             .card {
@@ -28,7 +28,8 @@
             }
         }
         .card:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
+            transition-duration: 0.3s;
             max-height: auto;
         }
         .like-dislike-icons {
@@ -136,7 +137,6 @@
            
             margin: auto;
             margin-bottom: 8px;
-            background-image: url(https://media.istockphoto.com/id/525568423/photo/london-piccadilly-during-night.jpg?s=2048x2048&w=is&k=20&c=b9MmnnA4Jv7-V0TSKHlkRAP4KD-0Ra4D7k-M7nqMeWY=);
             background-size: contain;
             overflow:hidden ;
         }
@@ -323,108 +323,33 @@
         </nav>
 
             <!-- Main Content -->
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="overflow: scroll; min-height: 200%;">
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4" style="max-height: 88vh; overflow-y:auto;">
                 <div class="input-group mb-3 mt-6" style="padding-top: 20px;max-width: 500px; margin:auto;">
                     <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="button">Search</button>
                     </div>
                 </div>
-
-                <!-- ad -->
-                <div class="ad anima">
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> <!-- Adding 'P' to complete the 'UNP' -->
-                            </span> 
-                            for Free</h1>
-                    </div>
-                </div>
                 <!-- Cards -->
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-                        <div class="card">
-                            <img src="https://i.postimg.cc/hj7M576s/V5201.webp"  class="card-img-top" alt="..."  data-toggle="modal" data-target="#productImageModal">
-                            <!-- style="max-height: 300px;" -->
-                            <div class="card-body">
-                                <h4 class="card-title" style="color: blue;">Ksh 200</h4>
-                                <h5 class="card-title"> Vitron V6036 subwoffer 10000w</h5>
-                                <p class="card-text" style="color: rgb(79, 79, 103);">Selling this from murang'a university DM if interested. Whatsapp number below</p>
-                            </div>
-                            <div class="big-button">
-                                <button class="btn btn-success big-button" style="max-width: 18rem;"><i class="fa-brands fa-whatsapp"></i><span style="margin-bottom: 9px; font-size: 20px; padding-left:5px;">whatsapp</span> </button>
-                            </div>
-                            <div class="flex ">
-                                <i class="fa-regular fa-heart" style="padding-top:8px;"></i>
-                                <a href="/product.html" class="btn btn-danger float-right" style="margin-top: 1px; float:right;">report</a>
-                            </div>
-                        </div>
+                <!-- Your existing HTML structure -->
+                <div class="container">
+                    <!-- ad -->
+                    <div id="hold_ad">
+                        <!-- ads here -->
+                    </div>
+                    <!-- Cards Container -->
+                    <div class="row row2">
+                        <!-- Cards will be dynamically appended here -->
                     </div>
                 </div>
             </main>
-                <!-- ad iliosimama-->
-               <div class="ad" style=" z-index: 60; position:absolute; transform: rotate(90deg); right:-400px; top: 700px;">
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> <!-- Adding 'P' to complete the 'UNP' -->
-                            </span> 
-                            for Free</h1>
-                    </div>
-                </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <!-- Modal -->
-<div class="modal fade" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" role="document"> <!-- Added 'modal-xl' class -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="productImageModalLabel">Product Image</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Modal body content goes here -->
-                <div class="container mt-5 rounded" style="border: 0.5mm solid rgb(211, 209, 209);">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="" style=" overflow: hidden;">
-                                <img src="https://i.postimg.cc/hj7M576s/V5201.webp" style="min-height: 400px; width:none;" class="card-img-top product-img" alt="Product Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">Product Name</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Buy Now</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 mt-4 mt-lg-0">
-                            <div class="d-flex flex-column justify-content-center h-100">
-                                <h2>Product Details</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                <ul>
-                                    <li>Feature 1</li>
-                                    <li>Feature 2</li>
-                                    <li>Feature 3</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Add to cart</button> <!-- Corrected 'calt' to 'cart' -->
-                <a href="/product.html"><button class="btn btn-primary">More</button></a>
-            </div>
-        </div>
-    </div>
+<div class="modal fade" onclick = "closeModal()" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
+<!-- model here -->
 </div>
 <footer style="z-index: 100;">
     <p>&copy; Ernest's University Resell Platform 2024. All rights reserved.</p>
@@ -441,27 +366,173 @@
         });
     </script>
         <!-- animate ad -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        const animaElement = document.querySelector('.anima');
-        const animaElement2 = document.querySelector('.anima2');
 
-        function runAnimation() {
-            animaElement.classList.add('anima');
+    <script>
+    async function get_products() {
+        try {
+            const response = await fetch('http://127.0.0.1:8003/all-products');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
+    }
+async function populateTable() {
+    let userData = await get_products();
+    userData.reverse();
+    let tableBody = document.querySelector('.row2');
+    
+  function getRandomColor() {
+    var color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    var brightness = parseInt(color.substr(1, 2), 16) + parseInt(color.substr(3, 2), 16) + parseInt(color.substr(5, 2), 16); 
+    if (brightness > 382) { 
+      return getRandomColor(); //
+    }
+    return color; // Return color if it's dark enough
+  }
+    userData.forEach(user => {
+        var randomColor = getRandomColor();
+        let card = document.createElement('div');
+        card.className = 'col-12 col-sm-6 col-md-4 col-lg-3 mb-3';
+        card.style = 'background-color:' + randomColor +'10';
+        card.innerHTML = `
+            <div data-toggle="modal" 
+                        onclick=modelid(${user.id}) 
+                        data-target="#productImageModal" class="card" style="border:2px solid ${randomColor};background-color: ${randomColor}23;">
+                <img src="${user.image || user.image != 'string' ? user.image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_FU6mHg12agMkBUT1e8Sg0vET4g4xK6cVQ&usqp=CAU"}" style=
+                'width:100%; height: 300px;' class="card-img-top" alt="..." data-toggle="modal" data-target="#productImageModal">
+                <div class="card-body">
+                    <h4 class="card-title" style="color: ${randomColor};">Ksh ${user.price}</h4>
+                    <h5 class="card-title">${user.title}</h5>
+                    <p class="card-text" style="color: rgb(79, 79, 103);">${user.description}</p>
+                </div>
+                <div class="big-button">
+                    <button class="btn btn-success big-button" style="max-width: 22rem;"><i class="fa-brands fa-whatsapp"></i><span style="margin-bottom: 9px; font-size: 20px; padding-left:5px;">whatsapp</span> </button>
+                </div>
+                <div class="flex ">
+                    <i class="fa-solid fa-heart" style="padding-top:8px; color:${randomColor}fd;"></i>
+                </div>
+            </div>
+        `;
+        tableBody.appendChild(card);
+    });
+}
+    populateTable();
+</script>
+<script>
+function closeModal() {
+    location.reload();
+}
+
+</script>
+<!-- model -->
+<script>
+   async function modelid(id){
+    console.log('id: '+id);
+   // try {
+    const response = await fetch('http://127.0.0.1:8003/product/' + id);
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+        //return data;
+   // } catch (error) {
+       // console.error('There was a problem with the fetch operation:', error);
+   // }
+    let user = data;
+    console.log('userData: '+ user);
+    let tableBody = document.getElementById('productImageModal');
+    
+    tableBody.style = "background-color: "+ user.color +"0f;" 
+    // Clear existing content
+    tableBody.innerHTML = '';
+    //var randomColor = getRandomColor();
+    let card = document.createElement('div');
+    card.classList = "modal-dialog modal-dialog-centered modal-xl";
+    card.style = "background-color:none !important;";
+    card.role = "document";
+    card.innerHTML = `       
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="productImageModalLabel">${user.title}</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container rounded" style="border: 0.5mm solid rgb(211, 209, 209);"><!--{randomColor}99-->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="" style=" overflow: hidden;">
+                                <img src="${user.image || user.image != 'string' ? user.image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY_FU6mHg12agMkBUT1e8Sg0vET4g4xK6cVQ&usqp=CAU"}" style="min-height: 400px; width:none;" class="card-img-top product-img" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-4 mt-lg-0">
+                            <div style="height: 300px; overflow-y: auto; position: relative;">
+                                <h1 class="card-title">${user.title}</h1>
+                                <div style="padding-top: 30px;"> 
+                                    <p>${user.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    tableBody.appendChild(card); 
+   }
+    </script>
+<script>
+async function get_ads() {
+    try {
+        const response = await fetch('http://127.0.0.1:8003/all-ads');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+async function ads(user) {
+    let tableBody = document.querySelector('#hold_ad');
+    tableBody.innerHTML = '';
+    let card = document.createElement('div');
+    card.classList = "ad anima";
+     card.style = "background-image: url("+ user.image +");"
+    card.innerHTML = `
+        <div class="ad_content" style="background-color: ${user.color}99;">
+            <h1 class="add-text">${user.title}</h1>
+        </div>
+    `;
+    tableBody.appendChild(card); 
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+    const animaElement = document.querySelector('#hold_ad');
+
+    async function runAnimation() {
+        animaElement.classList.add('anima');
+        let userData = await get_ads();
+        userData.reverse();
+        userData.forEach((user, index) => {
             setTimeout(function() {
                 animaElement.classList.remove('anima');
-            }, 1500); 
-        }
-        function runAnimation2() {
-            anima2Element.classList.add('anima2');
-            setTimeout(function() {
-                anima2Element.classList.remove('anima2');
-            }, 1500); 
-        }
-            setInterval(runAnimation2, 5000);
-            setInterval(runAnimation, 6000);
+                ads(user);
+            }, index * 7000); 
         });
+    }
 
-    </script>
+    setInterval(runAnimation, 7000); 
+});
+
+
+</script>
 </body>
 </html>

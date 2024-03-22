@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Dashboard</title>
+    <title>Urp Blog</title>
       <link rel="icon" width="32" height="32" href="https://img.icons8.com/hieroglyphs/32/22C3E6/experimental-home-hieroglyphs.png" type="image/x-icon" alt=""/>
       <style>
         body {
@@ -179,7 +179,6 @@
 
         .read-more {
         display: inline-block;
-        background-color: #007bff;
         color: #fff;
         padding: 10px 20px;
         border-radius: 5px;
@@ -187,9 +186,6 @@
         transition: background-color 0.3s ease;
         }
 
-        .read-more:hover {
-        background-color: #0056b3;
-        }
         /*anime*/
         .anima {
             animation: bounceFadeIn 1.5s ease-in-out;
@@ -231,7 +227,6 @@
         }
        /*model big text*/
        .container7 {
-            background-color: rgba(238, 0, 255, 0.155);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -275,7 +270,7 @@
                     <a class="nav-link" href="/Accomodation.html">House To Rent</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/sell.html">Education Material</a>
+                    <a class="nav-link" href="/education.html">Education Material</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -326,8 +321,8 @@
                 <ul class="nav flex-column">
                     <!-- Add your sidebar content here -->
                     <li class="nav-item">
-                        <a class="nav-link active navi" href="#">Blogs</a>
-                        <a class="nav-link  navi" href="#">Imaging Issues</a>
+                        <a class="nav-link active navi" onclick="handleClick(event)" href="#">Blogs</a>
+                        <a class="nav-link  navi" onclick="handleClick(event)" href="#">Imaging Issues</a>
                     </li>
                 </ul><br><br>
                 <br><br><br>
@@ -357,117 +352,239 @@
                 </div>
 
                 <!-- ad -->
-                <div class="ad anima" >
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> 
-                            </span> 
-                            for Free</h1>
+                <div id="hold_ad">
+                    <!-- ads here -->
+                </div>
+                <div class="container">
+                    <div class="row row2">
+
                     </div>
                 </div>
-  <div class="container">
-    <div class="row">
-        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(255, 255, 0, 0.216);">
-                <div class="content">
-                    <h2 class="title">Life and Faith</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;"> In the chaos of daily life, we often search for purpose.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(11, 11, 11, 0.216);">
-                <div class="content">
-                    <h2 class="title">It is & It shall</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;">But amidst the hustle, there's a truth.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(0, 255, 247, 0.216);">
-                <div class="content">
-                    <h2 class="title">It is in Faith</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;">what is and what will be are intertwined.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(221, 0, 255, 0.216); opacity: 99920%;">
-                <div class="content">
-                    <h2 class="title">It shall in Faith</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;">Life is a journey of discovery, filled with moments of beauty and wonder.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>        <!-- Card 2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-2">
-            <div class="blog-card card" data-toggle="modal" data-target="#productImageModal" style="  background-color: rgba(43, 255, 0, 0.216);">
-                <div class="content">
-                    <h2 class="title">Always be Graceful</h2>
-                    <p class="excerpt" style="height: 70px ; overflow:hidden;">It's in these moments that we find meaning and purpose, reminding us of the sacredness of existence.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
 
             </main>
-                <!-- ad iliosimama-->
-               <!-- <div class="ad anima2" style=" z-index: -60; position:absolute; transform: rotate(90deg); right:-400px; top: 700px; opacity: 10%;">
-                    <div class="ad_content">
-                        <h1 class="add-text">Advertise with  
-                            <span class="logo2" style="background-color: rgb(0, 0, 0); border-radius: 10%;">
-                                <span class="u">U</span>
-                                <span class="n">r</span>
-                                <span class="p">P</span> 
-                            </span> 
-                            for Free</h1>
-                    </div>
-                </div> -->
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <!-- Modal -->
-<div class="modal fade" style="background-color: #c003ff0f;" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" style="background-color: #c003ff0f !important;" role="document"> <!-- Added 'modal-xl' class -->
+<div class="modal fade" onclick="closeModal()" id="productImageModal"  tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
+<!-- this model -->
+</div>
+<footer style="z-index: 100;">
+    <p>&copy; Ernest's University Resell Platform 2024. All rights reserved.</p>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/b71be6edff.js" crossorigin="anonymous"></script>
+    <script>
+        // Prevent the dropdown from closing when an item is clicked
+        $('.dropdown-menu').on('click', function (e) {
+            e.stopPropagation();
+        });
+    </script>
+    <script>
+        let clickedLink = "Blogs";
+        // Function to handle click event
+        function handleClick(event) {
+            // Prevent default link behavior
+            event.preventDefault();
+            // Get the text content of the clicked link
+            clickedLink = event.target.textContent;
+            // Get all links
+            const links = document.querySelectorAll('.nav-link');
+            // Remove 'active' class from all links
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Get the clicked link
+            const clickedLinkElement = event.target;
+            // Add 'active' class to the clicked link
+            clickedLinkElement.classList.add('active');
+            //
+           let allPossible = ['Blogs', 'Imaging Issues'];// , 'Podcasts',
+            for (let i = 0; i < allPossible.length; i++) {
+                let spanId = allPossible[i];
+                let elements = document.querySelectorAll('#' + spanId);
+                elements.forEach(element => {
+                    element.style.display = 'none';
+                });
+            };
+            if (clickedLink === "Blogs") {
+                let elements = document.querySelectorAll('#Blogs');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } else if (clickedLink === 'Imaging Issues') {
+                let elements = document.querySelectorAll('#Imaging Issues');
+                elements.forEach(element => {
+                    element.style.display = 'inline';
+                });
+            } 
+            // Get the text content of the clicked link
+            clickedLink = clickedLinkElement.textContent;
+            populateTable(clickedLink);
+            // Perform any additional actions here, such as navigation or data manipulation
+            console.log("Clicked link:", clickedLink);
+        }
+
+    async function get_products() {
+        try {
+            const response = await fetch('http://127.0.0.1:8003/all-blogs');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
+    }
+    async function populateTable(clickedLink) {
+        let userData = await get_products();
+        userData.reverse();
+        let tableBody = document.querySelector('.row2');
+        // Clear existing content
+        tableBody.innerHTML = '';
+        
+        if(clickedLink == 'Blogs'){
+                console.log('true4');
+             userData.forEach(user => {
+                if(user.category == 'Blogs'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2 ";
+                    card.id = 'Blogs';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal"
+                        onclick=modelid(${user.id}) data-target="#productImageModal" style="  background-color: ${user.color}33;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;"> ${user.subtitle}</p>
+                                <a href="#" class="read-more" style="background-color: ${user.color}77; hover:background-color: ${user.color}33; color:black; hover:border:solid black 1px;">Read More</a>
+                                <!-- mix-blend-mode: lighten; -->
+
+                            </div>
+                        </div>
+                    `;
+                    tableBody.appendChild(card); 
+                }
+            });
+        }else if(clickedLink == 'Imaging Issues' ){
+            userData.forEach(user => {
+                if(user.category == 'Imaging Issues'){
+                    let card = document.createElement('div');
+                    card.classList = "col-12 col-sm-6 col-md-6 col-lg-3 mb-2";
+                    card.id = 'Imaging Issues';
+                    card.innerHTML = `
+                        <div class="blog-card card" data-toggle="modal"
+                        onclick=modelid(${user.id})  data-target="#productImageModal" style="  background-color: ${user.color}33;">
+                            <div class="content">
+                                <h2 class="title">${user.title}</h2>
+                                <p class="excerpt" style="height: 70px ; overflow:hidden;"> ${user.subtitle}</p>
+                                 <a href="#" class="read-more" style="background-color: ${user.color}77; hover:background-color: ${user.color}33; color:black; hover:border:solid black 1px;">Read More</a>
+
+                            </div>
+                        </div>
+                    `;
+                    tableBody.appendChild(card);
+                }
+            });
+        } 
+    }
+     populateTable(clickedLink);
+</script>
+<!-- close model -->
+<script>
+function closeModal() {
+    // Hide the modal using Bootstrap's modal method
+   /* $('#productImageModal').modal('hide');
+    
+    // Ensure modal backdrop is also removed
+    $('.modal-backdrop').remove();
+    
+    // Remove the "show" class from the modal (if necessary)
+    $('#productImageModal').removeClass('show');
+    
+    // Remove modal-open class from the body (if necessary)
+    $('body').removeClass('modal-open');
+    $('#productImageModal').removeClass('show');
+
+    var modal = document.getElementById('productImageModal');
+
+    // Set aria-labelledby attribute
+    modal.setAttribute('aria-labelledby', 'productImageModalLabel');
+
+    // Set aria-hidden attribute
+    modal.setAttribute('aria-hidden', 'true');
+    tableBody.innerHTML = '';*/
+    location.reload();
+
+}
+
+</script>
+<!-- model -->
+<script>
+   async function modelid(id){
+    console.log('id: '+id);
+   // try {
+    const response = await fetch('http://127.0.0.1:8003/blog/' + id);
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+        //return data;
+   // } catch (error) {
+       // console.error('There was a problem with the fetch operation:', error);
+   // }
+    let user = data;
+    console.log('userData: '+ user);
+    let tableBody = document.getElementById('productImageModal');
+    
+    tableBody.style = "background-color: "+ user.color +"0f;" 
+    // Clear existing content
+    tableBody.innerHTML = '';
+    let card = document.createElement('div');
+    card.classList = "modal-dialog modal-dialog-centered modal-xl";
+    card.style = "background-color:none !important;";
+    card.role = "document";
+    card.innerHTML = `       
         <div class="modal-content">
-            <div class="modal-header" style="background-color: #c003ff0f !important;">
-                <h5 class="modal-title" id="productImageModalLabel">Ur P infomation here</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modal-header" style="background-color: ${user.color}33 !important;">
+                <h5 class="modal-title" id="productImageModalLabel">Ur P Blog post</h5>
+                <button type="button" onclick="closeModal()" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <!-- Modal body content goes here -->
-                <div class="container mt-1 rounded" style="border: 0.5mm solid #c003ff0f; box-shadow: 0 0 20px 10px #c003ff37;">
+                <div class="container mt-1 rounded" style="border: 0.5mm solid ${user.color}33; box-shadow: 0 0 20px 10px ${user.color}37;">
                     <div class="row">
                         <div class="col-lg-6">
                             <div >
-                                <div class="container7">
-                                    <h1 class="beautiful-text">It is & It shall</h1>
+                                <div class="container7"  style="background-color:${user.color}33;">
+                                    <h1 class="beautiful-text">
+                                        ${user.title}
+                                        <!-- It is & It shall -->
+                                    </h1>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 mt-4 mt-lg-0">
-                            <div class="d-flex flex-column justify-content-center h-100">
-                                <h2>Life and Faith: A Journey of Meaning</h2>
+                            <div style="height: 300px; overflow-y: auto; position: relative;">
+                                <h2 style="position: sticky; top: 0;  backdrop-filter: blur(5px); background-color: rgba(255, 255, 255, 0.5);">${user.subtitle}</h2>
+                                <div style="padding-top: 30px;"> 
+                                    ${user.blog}
+                                </div>
+                                <!-- <h2>Life and Faith: A Journey of Meaning</h2>
                                 <p>In the chaos of daily life, we often search for purpose. But amidst the hustle, there's a truth: what is and what will be are intertwined.</p>
 
                                 <p>Life is a journey of discovery, filled with moments of beauty and wonder. It's in these moments that we find meaning and purpose, reminding us of the sacredness of existence.</p>
 
                                 <p>Faith serves as our compass, guiding us through uncertainty. It's a trust in the unseen, anchoring us in times of struggle and illuminating our path in the darkness.</p>
 
-                                <p>As we navigate life's ups and downs, let's embrace the truth that what is and what will be are connected. With faith .</p>
+                                <p>As we navigate life's ups and downs, let's embrace the truth that what is and what will be are connected. With faith .</p> -->
                             </div>
                         </div>
                     </div>
@@ -499,44 +616,58 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<footer style="z-index: 100;">
-    <p>&copy; Ernest's University Resell Platform 2024. All rights reserved.</p>
-</footer>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://kit.fontawesome.com/b71be6edff.js" crossorigin="anonymous"></script>
-    <script>
-        // Prevent the dropdown from closing when an item is clicked
-        $('.dropdown-menu').on('click', function (e) {
-            e.stopPropagation();
-        });
+    `;
+    tableBody.appendChild(card); 
+   }
     </script>
     <!-- animate ad -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        const animaElement = document.querySelector('.anima');
-        const animaElement2 = document.querySelector('.anima2');
+async function get_ads() {
+    try {
+        const response = await fetch('http://127.0.0.1:8003/all-ads');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
 
-        function runAnimation() {
-            animaElement.classList.add('anima');
+async function ads(user) {
+    let tableBody = document.querySelector('#hold_ad');
+    tableBody.innerHTML = '';
+    let card = document.createElement('div');
+    card.classList = "ad anima";
+    card.style = "background-image: url("+ user.image +");"
+    card.innerHTML = `
+        <div class="ad_content" style="background-color: ${user.color}99;">
+            <h1 class="add-text">${user.title}</h1>
+        </div>
+    `;
+    tableBody.appendChild(card); 
+}
+
+document.addEventListener('DOMContentLoaded', async function () {
+    const animaElement = document.querySelector('#hold_ad');
+
+    async function runAnimation() {
+        animaElement.classList.add('anima');
+        let userData = await get_ads();
+        userData.reverse();
+        userData.forEach((user, index) => {
             setTimeout(function() {
                 animaElement.classList.remove('anima');
-            }, 1500); 
-        }
-        function runAnimation2() {
-            anima2Element.classList.add('anima2');
-            setTimeout(function() {
-                anima2Element.classList.remove('anima2');
-            }, 1500); 
-        }
-            setInterval(runAnimation2, 5000);
-            setInterval(runAnimation, 6000);
+                ads(user);
+            }, index * 7000); 
         });
+    }
 
-    </script>
+    setInterval(runAnimation, 7000); 
+});
+
+
+</script>
 </body>
 </html>
